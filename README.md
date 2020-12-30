@@ -1,10 +1,16 @@
 # Travel Recommendation System (TRS)
 Repository here, explains the working of Travel Recommendation System (TRS), which aims to provide personalized recommendations to every user. TRS employs a subjective preference algorithm, in conjunction with the objective preference used in the commonly used recommendation systems, to provide travel suggestions more curated towards the individual user.
+
 ## Drawbacks of currently existing systems
 
 - Subjective preference is compromised for the ease of use.
 - Travel suggestions are not actually personalized, rather dependent on similarity between multiple users.
 - Require immense user database to provide any meaningful recommendation.
+
+## Proposed System
+Starting with the awareness set, i.e., all the destination spots present in the database, the system will narrow it down to the final recommendation. Available-awareness set, the places user can visit based on objective constraints, will be obtained in the first step. Further applying the subjective constraints, relevant set, the places user want to visit, will be obtained. The final step is to compare the destination spots present in the relevant set and recommend the most suitable ones to the user.
+
+![Screenshot (66)](https://user-images.githubusercontent.com/73714933/103364936-f64a5e80-4ae4-11eb-85e6-804fcc437989.png)
 
 ## Working
 The entire system has numerous modules working in conjunction to perform the required task. The basic idea is to scrape the information of tourist places from the web, classify and organize it into a database. Then, obtain the user preference, based on which the destinations from the database are suggested. To further understand the working process of the system, let's discuss the aforementioned modules in detail.
